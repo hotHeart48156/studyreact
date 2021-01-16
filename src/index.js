@@ -11,7 +11,7 @@ import LocaleProvider from "antd/lib/locale-provider";
 import zhCN from "antd/lib/locale-provider/zh_CN";
 import store from "./store";
 import { Provider } from "react-redux";
-
+import {NotFound} from "./views"
 render(
   <Provider store={store}>
     <LocaleProvider locale={zhCN}>
@@ -35,7 +35,7 @@ render(
               />
             );
           })}
-          <Redirect to="404" />
+          <Route component={NotFound} />
         </Switch>
       </Router>
     </LocaleProvider>

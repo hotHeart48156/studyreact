@@ -29,9 +29,6 @@ class App extends Component {
                   exact={route.exact}
                   render={(routeProps) => {
                     const hadPression = route.roles.includes(this.props.role);
-                    console.log(hadPression);
-                    console.log(typeof this.props.role);
-                    console.log(route.roles);
                     return hadPression ? (
                       <route.component {...routeProps} />
                     ) : (
